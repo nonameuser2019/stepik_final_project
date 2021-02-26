@@ -1,11 +1,12 @@
 from selenium.webdriver.common.by import By
 
 
-class MainPageLocators():
+class BasePageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
+
 
 class LoginPageLocators():
-
     AUTH_FORM = (By.ID, 'login_form')
     REG_FORM = (By.ID, 'register_form')
     LOGIN_LINK = 'http://selenium1py.pythonanywhere.com/ru/accounts/login/'

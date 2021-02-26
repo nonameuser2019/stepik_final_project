@@ -36,3 +36,7 @@ class ProductPage(BasePage):
     def check_message_after_add_product_to_basket(self):
         assert self.is_not_element_present(*ProductCardLocators.MESSAGE_ADD_TO_CARD), \
             'The message that product is add to basket does not find'
+
+    def check_message_disappeared_after_add_to_basket(self):
+        assert self.is_disappeared(*ProductCardLocators.MESSAGE_ADD_TO_CARD), 'The message that product add' \
+                                                                              'to cart not disappear'
